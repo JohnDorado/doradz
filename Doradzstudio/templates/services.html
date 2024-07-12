@@ -1,0 +1,21 @@
+<!-- templates/services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Our Photography Services</h1>
+    <ul>
+        {% for service in services %}
+            <li>
+                <h2>{{ service.name }}</h2>
+                <p>{{ service.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
